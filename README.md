@@ -84,7 +84,8 @@ ToDoMate/
 ## 이미지 미리보기
 
 ### 애플리케이션 스크린샷
-<img src="./public/image.png" alt="ToDoMate Preview" width="600">
+<img src="./public/imgex1.png" alt="ToDoMate Preview" width="600"><br>
+<img src="./public/imgex2.png" alt="ToDoMate Preview" width="600"><br>
 
 ---
 
