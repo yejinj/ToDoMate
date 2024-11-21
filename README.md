@@ -49,7 +49,6 @@ ToDoMate/
 ├── App.css             # 스타일 파일
 ├── index.js            # 진입점 파일
 └── public/
-    └── image.png       # 로고 이미지
 ```
 
 ---
@@ -85,9 +84,9 @@ ToDoMate/
 
 ### 애플리케이션 스크린샷
 <img src="./public/imgex1.jpg" alt="ToDoMate Preview" width="600"><br>
-- 할 일 등록     
+할 일 등록     
 <img src="./public/imgex2.jpg" alt="ToDoMate Preview" width="600"><br>
-- 우선순위 지정 및 세부 기능      
+우선순위 지정 및 세부 기능      
 
 ---
 
