@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# ToDoMate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 개요
+**ToDoMate**는 React를 사용한 직관적인 할 일 관리 애플리케이션입니다. 사용자는 마감일, 우선순위, 상태 필터 등을 활용해 할 일을 효율적으로 관리할 수 있습니다.
 
-## Available Scripts
+### 주요 기능
+- **할 일 추가**: 할 일, 우선순위, 마감일을 입력하여 관리 가능.
+- **상태 관리**: 할 일 완료/미완료 상태 전환, 선택 및 삭제 기능.
+- **필터링**: 우선순위, 상태별로 할 일 목록 필터링.
+- **마감일 알림**: 마감 임박 항목에 대한 경고 표시.
+- **로컬 스토리지 저장**: 데이터를 브라우저에 저장하여 새로고침 후에도 유지.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 설치 및 실행
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. 클론하기
+GitHub에서 프로젝트를 클론합니다:
+```bash
+git clone https://github.com/username/ToDoMate.git
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. 의존성 설치
+클론한 디렉토리로 이동하여 필요한 의존성을 설치합니다:
+```bash
+cd ToDoMate
+npm install
+```
 
-### `npm test`
+### 3. 실행
+개발 서버를 실행합니다:
+```bash
+npm start
+```
+브라우저에서 [http://localhost:3000](http://localhost:3000)으로 접속합니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 폴더 구조
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+ToDoMate/
+├── components/         # 주요 컴포넌트 폴더
+│   ├── TodoFilter.js   # 필터링 컴포넌트
+│   ├── TodoInput.js    # 입력 컴포넌트
+│   ├── TodoItem.js     # 개별 할 일 항목 컴포넌트
+│   └── TodoList.js     # 할 일 목록 컴포넌트
+├── App.js              # 메인 애플리케이션 컴포넌트
+├── App.css             # 스타일 파일
+├── index.js            # 진입점 파일
+└── public/
+    └── image.png       # 로고 이미지
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 주요 컴포넌트
 
-### `npm run eject`
+### 1. `TodoInput`
+사용자가 새로운 할 일을 추가할 수 있는 컴포넌트입니다.
+- **우선순위**: High, Medium, Low
+- **마감일 유효성 검사**: 마감일은 오늘 이후로만 설정 가능.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. `TodoList`
+정렬된 할 일 목록을 보여주는 컴포넌트입니다.
+- **정렬 기준**: 완료 상태 > 우선순위 > 마감일.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. `TodoItem`
+각 할 일 항목을 관리하는 컴포넌트입니다.
+- **마감일 계산**: `D-` 또는 `D+` 형식으로 표시.
+- **우선순위 색상 표시**:
+  - High: 빨강
+  - Medium: 노랑
+  - Low: 초록
+- **상태 관리**: 완료/미완료 전환, 선택, 삭제.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. `TodoFilter`
+우선순위 및 상태별로 할 일 목록을 필터링할 수 있는 컴포넌트입니다.
+- **우선순위**: High, Medium, Low 선택 가능.
+- **상태**: 모든 항목, 진행 중, 완료됨.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 이미지 미리보기
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 애플리케이션 스크린샷
+<img src="./public/image.png" alt="ToDoMate Preview" width="600">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 기술 스택
+- **프론트엔드**: React, HTML, CSS
+- **데이터 관리**: LocalStorage
+- **스타일링**: CSS (모듈화)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 기여 방법
+1. 이 프로젝트를 포크합니다.
+2. 새로운 브랜치를 생성합니다: `git checkout -b feature/new-feature`
+3. 변경 사항을 커밋합니다: `git commit -m 'Add new feature'`
+4. 브랜치에 푸시합니다: `git push origin feature/new-feature`
+5. Pull Request를 생성합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
