@@ -84,8 +84,10 @@ ToDoMate/
 ## 이미지 미리보기
 
 ### 애플리케이션 스크린샷
-<img src="./public/imgex1.png" alt="ToDoMate Preview" width="600"><br>
-<img src="./public/imgex2.png" alt="ToDoMate Preview" width="600"><br>
+<img src="./public/imgex1.jpg" alt="ToDoMate Preview" width="600"><br>
+- 할 일 등록
+<img src="./public/imgex2.jpg" alt="ToDoMate Preview" width="600"><br>
+- 우선순위 지정 및 세부 기능
 
 ---
 
